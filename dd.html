@@ -1,0 +1,73 @@
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!---------------------------------------------------------------></!--------------------------------------------------------------->
+<script type="text/javascript">
+window.onload = function(){
+
+var el = document.getElementById("main");
+el.addEventListener("mousemove", blah);
+function blah(e)
+{var x = e.clientX;
+ var y = e.clientY;
+ document.getElementById("out").innerHTML =("x : " + x + "<br></br>"+ " y : " + y);
+ var d =  document.getElementById("bl");
+ if(x<500)
+ d.style.backgroundColor = 'red';
+ else
+ d.style.backgroundColor = 'green';
+ d.style.position = "absolute";
+ d.style.left = x+13;
+ d.style.top = y+17;
+ d.innerHTML = ("x : " + x + "<br></br>"+ " y : " + y);
+};
+function line()
+{var l = document.getElementById("lin");
+ l.style.width="400px";}
+};
+</script>
+<!--------------------------------------------------------------></!-------------------------------------------------------------->
+<style>
+p
+{font-size:12px;
+ color:black;}
+#main
+{height:91%;
+ width:inherit;
+ background-color:yellow;
+ padding:2%;}
+#out, #bl
+{font-family: 'Roboto Condensed', sans-serif;
+ font-size:14px;
+ background-color:black;
+ color:white;
+ width:45px;
+ padding:7px 7px 7px 7px;
+ line-height:78%;
+}
+#head
+{font-family:'Roboto Condensed', sans-serif;
+ font-size:14px;
+ padding:5px;
+ text-align:right;
+ position:relative;
+ top:-45px;
+ left:10px;
+ line-height:85%}
+ #lin
+ {width:30px;
+  height:30px;
+  cursor:pointer;}
+</style>
+</head>
+<body>
+<div id="main">
+<div id="out">MOUSE<br></br>HOVER</div>
+<div id="head"><b>BASIC SKETCH | JavaScript Experiment</b><br></br><a style="font-size:0.9em;">by JEWEL JAMES</a></div>
+<div id= "bl">CO-<br></br>ORDS</div>
+<!--TOOLS--></!--TOOLS-->
+<div id ="lin" onclick= "line()" ><img src="D:\Dev Resources\Project Code\Untitled.jpg"></img></div>
+</div>
+</body>
+</html>
